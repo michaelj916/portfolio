@@ -1,44 +1,49 @@
 // check for device size ( 768px targets mobile devices and upwards to iPad's )
-var responsive = window.matchMedia("(max-width: 768px)");
+const responsive = window.matchMedia('(max-width: 768px)');
 
 
 if (responsive.matches) {
     var firstN = new Blotter.Text("MICHAEL JARRAH", {  // if device is responsive, decrease font size and padding
         family : "'Roboto', sans-serif",
-        size : 40,
+        size : 41,
         weight : 900,
         fill : "#4d4445",
-        paddingLeft: 20,
-        paddingRight: 20,
-        paddingTop: 0,
-        paddingBottom: 0
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 5,
+        paddingBottom: 15
     });
 }
 else {
     var firstN = new Blotter.Text("MICHAEL JARRAH", {  // else increase font size and padding for computers
         family : "arial",
-        size : 75,
+        size : 65,
         weight : 950,
         fill : "#4d4445",
-        paddingLeft: 50,
+        paddingLeft: 30,
         paddingRight: 50,
-        paddingTop: 30,
+        paddingTop: 10,
         paddingBottom: 30
     });
 }
 
 // refer 'https://blotter.js.org/#/documentation'
-var material = new Blotter.LiquidDistortMaterial();
+var material = new Blotter.FliesMaterial();
 
 if (responsive.matches) {
-    material.uniforms.uSpeed.value = 0.2;
-    material.uniforms.uVolatility.value = 0.05;
-    material.uniforms.uSeed.value = 0.5;
+    material.uniforms.uSpeed.value = 9;
+    material.uniforms.uPointRadius.value = 0.8;
+    material.uniforms.uPointCellWidth.value = 0.015;
+
+    // material.uniforms.uVolatility.value = 0.05;
+    // material.uniforms.uSeed.value = 0.5;
 }
 else {
-    material.uniforms.uSpeed.value = 0.2;
-    material.uniforms.uVolatility.value = 0.1;
-    material.uniforms.uSeed.value = 0.0;
+    material.uniforms.uSpeed.value = 5;
+    material.uniforms.uPointRadius.value = 0.8;
+    material.uniforms.uPointCellWidth.value = 0.025;
+    // material.uniforms.uVolatility.value = 0.1;
+    // material.uniforms.uSeed.value = 0.0;
 }
 
 
@@ -53,5 +58,6 @@ scope.appendTo(elem);
 
 
 
-/* --------------------------------------------------------------------------------------- */
 
+
+/* --------------------------------------------------------------------------------------- */

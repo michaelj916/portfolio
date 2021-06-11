@@ -267,7 +267,7 @@ html:not(.is-firefox):not(.is-ie11):not(.is-edge) body:before {
 /* -----  broader styles  ------ */
 body {
     background-color: #b19fa2;    
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -277,21 +277,26 @@ body {
 
 .header {
     position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .linktree {
     position: fixed;
-    bottom: 10%;
-    left: 10%;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
 }
 
 ul {
-    list-style-type: none;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 ul li {
+    display: grid;
     text-align: center;
+    padding: 60px;
 }
 
 .link {
@@ -299,21 +304,27 @@ ul li {
     color: #000;
     font-weight: 300;
     font-size: 20px;
-    transition: color .25s;
+    opacity: 40%;
 }
 
 ul li:hover {
     cursor: help;
     background-color: #f7bcbc9f;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    padding-left: 6px;
-    padding-right: 6px;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+    -webkit-transition: text-decoration 500ms linear;
+    -ms-transition: text-decoration 500ms linear;
+    transition: text-decoration 500ms linear;
     border-radius: 3%;
 }
 
 ul li:hover a {
-    text-decoration: line-through;
+    text-decoration: line-through #000;
+    -webkit-transition: text-decoration 900ms linear;
+    -ms-transition: text-decoration 900ms linear;
+    transition: text-decoration 900ms linear;
+
 }
 
 .link:hover {
@@ -321,7 +332,51 @@ ul li:hover a {
     text-decoration: line-through #c0e4ed;
 }
 
-/* -- item positioning -- */
+@media only screen and (max-width: 1393px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    ul li {
+        padding: 40px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    ul li {
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .header {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .linktree {
+        top: 52%;
+        left: 47%;
+    }
+    
+    ul {
+        grid-template-columns: 1fr;
+    }
+    
+    ul li {
+        padding: 10px;
+    }
+
+    .link {
+        font-size: 16px;
+        opacity: 40%;
+    }
+}
+/* -- Start random item positioning 
 .link-item1 {
     position: fixed;
     transform: rotate(-90deg);
@@ -393,7 +448,7 @@ ul li:hover a {
 }
 
 @media screen and (max-width: 768px) {
-    /* -- item positioning mobile -- */
+     -- item positioning mobile -- 
     .link-item1 {
         position: fixed;
         left: 0px;
@@ -456,3 +511,5 @@ ul li:hover a {
     }
 
 }
+
+ End Random Pos -------- */
