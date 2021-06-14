@@ -56,8 +56,15 @@ var scope = blotter.forText(firstN);
 
 scope.appendTo(elem);
 
+//  end blotter ------------------------
+
+var colors = ['#74b8c7', '#9ebb9c', '#bfd387', '#f5cff8', '#dca6bf', '#97a8d3', '#d2abee'];
+var selected = colors[Math.floor(Math.random() * colors.length)];
 
 
 
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = selected;
+}
 
-/* --------------------------------------------------------------------------------------- */
+changeBackgroundColor();
