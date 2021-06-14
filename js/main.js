@@ -31,9 +31,9 @@ else {
 var material = new Blotter.FliesMaterial();
 
 if (responsive.matches) {
-    material.uniforms.uSpeed.value = 9;
-    material.uniforms.uPointRadius.value = 0.8;
-    material.uniforms.uPointCellWidth.value = 0.015;
+    material.uniforms.uSpeed.value = 2;
+    material.uniforms.uPointRadius.value = 1;
+    material.uniforms.uPointCellWidth.value = 0.02;
 
     // material.uniforms.uVolatility.value = 0.05;
     // material.uniforms.uSeed.value = 0.5;
