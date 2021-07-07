@@ -67,4 +67,4 @@ function changeBackgroundColor() {
     document.body.style.backgroundColor = selected;
 }
 
-changeBackgroundColor();
+window.onload = changeBackgroundColor();

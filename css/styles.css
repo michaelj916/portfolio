@@ -93,16 +93,19 @@ ul li:hover a {
 
     .linktree {
         top: 52%;
-        left: 47%;
+        left: 50%;
     }
     
     ul {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding-inline-start: 0px;
     }
     
     ul li {
-        padding: 10px;
+        padding: 25px;
     }
+
+    
 
     .link {
         font-size: 16px;
