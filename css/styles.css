@@ -33,6 +33,10 @@ ul li {
     padding: 60px;
 }
 
+a em {
+    text-decoration: line-through;
+}
+
 .link {
     text-decoration: none;
     color: #000;
