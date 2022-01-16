@@ -22,7 +22,7 @@ title: Michael Jarrah's Blog
 email: michaelj916@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This blog will talk about science, technology, art, and philosophy. 
-baseurl: "/pages/blog" # the subpath of your site, e.g. /blog
+baseurl: "/pages/blog/_site" # the subpath of your site, e.g. /blog
 url: "https://michaeljarrah.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: notjakeewald
 github_username:  michaelj916
